@@ -1,0 +1,15 @@
+name: Test push to specific branch
+on:
+  workflow_call: 
+  push:
+    branches:
+      - main
+  pull_request: 
+    types:
+      - opened
+jobs:
+  print-text:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print hello
+        run: echo "Hello there"
